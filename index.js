@@ -346,16 +346,20 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 function getHTML(data){
   for (let artist of data) {
-    console.log(`<div class='name'>
+      const artistHTML = `<div id='artist'>
+      <div class='image'>
+        <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/starry-night-by-vincent-van-gogh-vincent-van-gogh.jpg"/>
+      </div>
+      <div class ='name'>
       <a href='${artist.wikipedia}'>${artist.name}</a>
       </div>
-      <div class='bio'>${artist.bio}
-      </div>
-    `)
+      <div class='bio'>${artist.bio}</div>
+      </div>`
+      console.log(artistHTML);
   }
 }
 
-/* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
+/* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪 
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
 function randomize(objArray){
