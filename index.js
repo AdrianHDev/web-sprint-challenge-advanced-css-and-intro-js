@@ -309,8 +309,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(artistsArray){
+  let artistsManufacturers = [];
+  for ( let artist of artistsArray ) {
+    if (artist.paintings  > 100 ) {
+      artistsManufacturers.push(artist.name)
+    }
+  }
+  return artistsManufacturers;
 }
 
 
@@ -338,12 +344,16 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
-
-    /* Code here */
-
+function getHTML(data){
+  for (let artist of data) {
+    console.log(`<div class='name'>
+      <a href='${artist.wikipedia}'>${artist.name}</a>
+      </div>
+      <div class='bio'>${artist.bio}
+      </div>
+    `)
   }
-
+}
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
