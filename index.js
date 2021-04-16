@@ -288,8 +288,16 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(artistsArray){
+    artistsArray.push({ 
+      id: 20,
+      name: "Adrian", 
+      years: "2000 - current day",
+      genre: "Web Design", 
+      nationality: "Native American | African American | Caucasian | Hispanic",
+      bio: "Little minds are tamed and subdued by misfortune; but great minds rise above them",
+    });
+    return artistsArray;
   }
 
   
