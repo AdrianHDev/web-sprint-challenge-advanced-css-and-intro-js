@@ -372,8 +372,18 @@ function randomize(objArray){
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
- 
- 
+ function advancedget20s(artistsArray) {
+  return artistsArray.filter((artist) => {
+    let [birth, death] = artist.years.split(' - ');
+    if (birth >= 1900 && death <= 2000){
+      return true;
+    }
+  }).map((artist) => {
+    return artist.name;
+  })
+}
+// console.log(advancedget20s(artists));
+
  
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
  function foo(){
