@@ -149,11 +149,7 @@ button:hover{
 
 @media (max-width:500px) {
     /* title section style mobile */
-    .title-container div { 
-        width: 100%;
-    }
-    
-    .title-container hr { 
+    .title-container div,.title-container hr { 
         width: 100%;
     }
     
