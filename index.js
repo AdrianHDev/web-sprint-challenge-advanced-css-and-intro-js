@@ -246,9 +246,13 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(artistsArray) {
   let twentiesArtists = [];
-  for ( let artist in artistsArray ) {
-    
+  for ( let artist of artistsArray ) {
+    let [birth, death] = artist.years.split(" - ")
+    if (birth >= 1900 && death <= 2000) {
+      twentiesArtists.push(artist.name)
+    }
   }
+  return twentiesArtists;
 }
 
 
